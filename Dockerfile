@@ -1,5 +1,5 @@
-MAINTAINER Viktor Petersson <petersson@gmail.com>
 FROM node
+MAINTAINER Viktor Petersson <petersson@gmail.com>
 EXPOSE 8080
 
 RUN echo '{ "allow_root": true  }' > /root/.bowerrc
