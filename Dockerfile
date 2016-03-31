@@ -1,4 +1,6 @@
+MAINTAINER Viktor Petersson <petersson@gmail.com>
 FROM node
+EXPOSE 8080
 
 RUN echo '{ "allow_root": true  }' > /root/.bowerrc
 RUN \
@@ -16,3 +18,5 @@ RUN \
   bower cache clean
 
 ADD config.js  /opt/pb/config.js
+WORKDIR /opt/pb
+CMD pbctrl start
